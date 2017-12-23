@@ -15,3 +15,19 @@ class Solution:
         while val in nums:
             nums.remove(val)
             
+############ METHOD 2 #####################
+class Solution:
+    def removeElement(self, nums, val):
+        """
+        :type nums: List[int]
+        :type val: int
+        :rtype: int
+        """
+        nextPos = 0
+        for num in nums:
+            if num != val:
+                print(num)
+                nums[nextPos] = num
+                print(num)
+                nextPos += 1
+        return nextPos
